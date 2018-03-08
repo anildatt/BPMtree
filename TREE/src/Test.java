@@ -4,34 +4,34 @@ import java.util.ArrayList;
 public class Test {
 
 	public static void main(String[] args) {
-		BPMTreeNode root = new BPMTreeNode(0, "Root");
-		int parentId = root.getId();
+		BPMTreeNode root = new BPMTreeNode("T001", "Root");
+		String parentId = root.getId();
 
-		BPMTreeNode newNodeBread = new BPMTreeNode(1, "Bread");
-		BPMTreeNode newNodeMilk = new BPMTreeNode(2, "Milk");
-		BPMTreeNode newNodeMeat = new BPMTreeNode(3, "Meat");
-		BPMTreeNode newNodeEggs = new BPMTreeNode(4, "Eggs");
+		BPMTreeNode callActivityNode1 = new BPMTreeNode("T002", "callActivityNode1");
+		BPMTreeNode callActivityNode2 = new BPMTreeNode("T003", "callActivityNode1");
+		BPMTreeNode callActivityNode3 = new BPMTreeNode("TOO4", "callActivityNode1");
+		BPMTreeNode callActivityNode4 = new BPMTreeNode("T005", "callActivityNode1");
 		ArrayList<BPMTreeNode> nodeList = new ArrayList<BPMTreeNode>();
-		nodeList.add(newNodeBread);
-		nodeList.add(newNodeMilk);
-		nodeList.add(newNodeMeat);
-		nodeList.add(newNodeEggs);  
+		nodeList.add(callActivityNode1);
+		nodeList.add(callActivityNode2);
+		nodeList.add(callActivityNode3);
+		nodeList.add(callActivityNode4);  
 		BPMTree.addChildrenNodes(root, parentId, nodeList);
 		  
-		parentId = newNodeBread.getId();
+		parentId = callActivityNode1.getId();
 
-		BPMTreeNode newNodeBreadW = new BPMTreeNode(20, "White Bread");
-		BPMTreeNode newNodeBreadC = new BPMTreeNode(21, "Corn Bread");
-		BPMTreeNode newNodeBreadWG = new BPMTreeNode(22, "Whole Grain Bread");
-		BPMTreeNode newNodeBreadWT = new BPMTreeNode(23, "White Toast Bread");
-		BPMTreeNode newNodeBreadWGTB = new BPMTreeNode(24, "Whole Grain Toast Bread");
+		BPMTreeNode callActivityNode5 = new BPMTreeNode("T006", "White Bread");
+		BPMTreeNode callActivityNode6 = new BPMTreeNode("T007", "Corn Bread");
+		BPMTreeNode callActivityNode7 = new BPMTreeNode("T008", "Whole Grain Bread");
+		BPMTreeNode callActivityNode8 = new BPMTreeNode("T009", "White Toast Bread");
+		BPMTreeNode callActivityNode9 = new BPMTreeNode("T10", "Whole Grain Toast Bread");
 
 		ArrayList<BPMTreeNode> nodeList2 = new ArrayList<BPMTreeNode>(); 
-		nodeList2.add(newNodeBreadW);
-		nodeList2.add(newNodeBreadC);
-		nodeList2.add(newNodeBreadWG);
-		nodeList2.add(newNodeBreadWT);
-		nodeList2.add(newNodeBreadWGTB);
+		nodeList2.add(callActivityNode5);
+		nodeList2.add(callActivityNode6);
+		nodeList2.add(callActivityNode7);
+		nodeList2.add(callActivityNode8);
+		nodeList2.add(callActivityNode9);
 		BPMTree.addChildrenNodes(root, parentId, nodeList2);
 	}
 

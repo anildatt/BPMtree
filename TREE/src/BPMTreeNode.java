@@ -3,24 +3,27 @@ import java.util.ArrayList;
 
 public class BPMTreeNode
 	{
-	   int id;
+	   String id;
 	   String name;
 	   BPMTreeNode parent;
 	   ArrayList<BPMTreeNode> children;
 	  
-	   public BPMTreeNode(int id, String data)
+	   public BPMTreeNode(String string, String data)
 	   {
-	      id = id;
+	      string = string;
 	      data = data;
 	   }
 
-	public int getId() {
+	
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+
+	public void setId(String id) {
 		this.id = id;
 	}
+
 
 	public String getName() {
 		return name;

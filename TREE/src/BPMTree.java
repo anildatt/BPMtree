@@ -10,7 +10,7 @@ public class BPMTree
 	   
 	   
 	   
-	   public static int addChildrenNodes(BPMTreeNode rootNode, int parentId, ArrayList<BPMTreeNode> nodesToAdd)
+	   public static int addChildrenNodes(BPMTreeNode rootNode, String parentId, ArrayList<BPMTreeNode> nodesToAdd)
 	   {
 	      if(rootNode == null)
 	      {
@@ -22,7 +22,7 @@ public class BPMTree
 	         rootNode.setChildren(new ArrayList<BPMTreeNode>());
 	      }
 	     
-	      if(rootNode.getId() == parentId)
+	      if(rootNode.getId().equals(parentId))
 	      {
 	         for(int i=0; i< nodesToAdd.size(); i++)
 	         {

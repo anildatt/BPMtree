@@ -11,13 +11,14 @@ public class Test {
 		BPMTreeNode callActivityNode2 = new BPMTreeNode("T003", "callActivityNode1");
 		BPMTreeNode callActivityNode3 = new BPMTreeNode("TOO4", "callActivityNode1");
 		BPMTreeNode callActivityNode4 = new BPMTreeNode("T005", "callActivityNode1");
+		
 		ArrayList<BPMTreeNode> nodeList = new ArrayList<BPMTreeNode>();
 		nodeList.add(callActivityNode1);
 		nodeList.add(callActivityNode2);
 		nodeList.add(callActivityNode3);
 		nodeList.add(callActivityNode4);  
 		BPMTree.addChildrenNodes(root, parentId, nodeList);
-		  
+	  
 		parentId = callActivityNode1.getId();
 
 		BPMTreeNode callActivityNode5 = new BPMTreeNode("T006", "White Bread");
